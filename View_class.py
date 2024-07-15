@@ -1,18 +1,117 @@
-import Main
-class View:
-    def __init__(self, controller):
-        self.controller = controller
-
-
-    def print_promt():
+Class View():
+    def __init__(self):
+        pass
+    def print_promt(self):
         return print('Введите команду (look, find, reviews, end): ')
     def print_command(command):
         return print(command)
-    def print_invalid_command():
+    def print_invalid_command(self):
         return print('Такой команды нет!')
-    def print_exit():
+    def print_exit(self):
         print("Done")
+    def print_search_parameters(self):
+        print(('''
+    По какому параметру осуществлять поиск?
+    1 - Город
+    2 - Штат
+    3 - Индекс'''))
+    def print_incorrect_parameters(self):
+        print('''
+            Введен некорректный ответ. Повторите попытку.
+            По какому параметру осуществлять поиск?
+            1 - Город
+            2 - Штат
+            3 - Индекс''')
+    def print_search_city(self):
+        print('Введите название города: ')
+    def print_search_state(self):
+        print('Введите название штата: ')
+    def print_search_zip(self):
+        print('Введите индекс: ')
+    def print_market_info(self, ID, MarketName, zip, State, Country,City, Street, Website, Facebook, Twitter, OtherMedia):
+        print(f'''
+        Market ID: {ID}
+        Market name: "{MarketName}"
+        Adress:
+            Index: {zip}
+            State: {State}
+            Country: {Country}
+            City: {City}
+            Street: {Street}
+        Contacts:
+            Website: {Website}
+            Facebook: {Facebook}
+            Twitter: {Twitter}
+            Other Media: {OtherMedia}''')
 
+    def print_products_info(self, ID, MarketName, Organic, Bakedgoods, Cheese, Crafts, Flowers, Eggs, Seafood, Herbs,\
+    Vegetables, Honey, Jams, Maple, Meat, Nursery, Nuts, Plants, Poultry, Prepared, Soap, Trees, Wine, Coffee, Beans,\
+    Fruits, Grains, Juices, Mushrooms, PetFood, Tofu, WildHarvested):
+        print(f'''
+        Market ID: {ID}
+        Market name: "{MarketName}")
+        Products:
+            Organic: {Organic}
+            Bakedgoods: {Bakedgoods}
+            Cheese: {Cheese}
+            Crafts: {Crafts}
+            Flowers: {Flowers}
+            Eggs: {Eggs}
+            Seafood: {Seafood}
+            Herbs: {Herbs}
+            Vegetables: {Vegetables}
+            Honey: {Honey}
+            Jams: {Jams}
+            Maple: {Maple}
+            Meat: {Meat}
+            Nursery: {Nursery}
+            Nuts: {Nuts}
+            Plants: {Plants}
+            Poultry: {Poultry}
+            Prepared: {Prepared}
+            Soap: {Soap}
+            Trees: {Trees}
+            Wine: {Wine}
+            Coffee: {Coffee}
+            Beans: {Beans}
+            Fruits: {Fruits}
+            Grains: {Grains}
+            Juices: {Juices}
+            Mushrooms: {Mushrooms}
+            PetFood: {PetFood}
+            Tofu: {Tofu}
+            WildHarvested: {WildHarvested}''')
+
+    def print_user_info(self, name, surname, gender, age, phone_number, email):
+        print(f'''
+        User Name: {name} 
+        User Surname: {surname} 
+        Gender: {gender}
+        Age: {age}
+        Phone Number: {phone_number}
+        Email: {email}''')
+
+    def print_gander_choice:
+        print('''
+        Выберите Ваш пол:
+        1 - Мужской
+        2 - Женский''')
+    def print_incorrect_gander:
+        print('''
+        Введен некорректный ответ. Повторите попытку.    
+        Выберите Ваш пол:
+        1 - Мужской
+        2 - Женский''')
+    def print_age:
+        print('Введите возраст')
+    def print_number:
+        print('Введите номер телефона')
+    def print_email:
+        print('Введите Email')
+    def print_password:
+        print('Введите пароль')
+    def print_user_exist:
+        print('Пользователь с таким номером телефона или Email уже усществует')
 
 if __name__ == "__main__":
     def push(command):
